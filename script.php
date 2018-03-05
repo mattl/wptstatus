@@ -77,7 +77,7 @@ $output .= "<p>" . "Machine uptime: " . $uptime[$i] . "</p>";
 $table .= "<td>" . $uptime[$i] . "</td>";
 $output .= "<p>" . "Machine disk usage: " . $diskspace[$i] . "</p>";
 $output .= "<p>" . "Machine inode usage: " . $inodespace[$i] . "</p>";
-$output .= "<p><progress value='" . $progresscount[$i] . "' max='" . $totalcount[$i] . "'></progress></p>";
+$output .= "<p><meter title='" . $progresscount[$i] . "/"  . $totalcount[$i] . "' value='" . $progresscount[$i] . "' max='" . $totalcount[$i] . "'></meter></p>";
 $table .= "<td>" . $progresscount[$i] . "</td>";
 $table .= "<td>" . $totalcount[$i] . "</td>";
 
