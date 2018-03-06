@@ -1,7 +1,7 @@
 <?php
 
-$hosts = array("ubuntu@54.90.215.143", "ubuntu@52.87.229.158", "root@46.43.14.27","root@46.43.3.116");
-$hostnames = array("Chrome", "Firefox", "Edge", "Safari");
+$hosts = array("ubuntu@54.90.215.143", "ubuntu@52.87.229.158","root@46.43.3.116", "root@46.43.14.27");
+$hostnames = array("Chrome", "Firefox", "Safari", "Edge");
 
 $pidscript = "ps aux | grep 'run.p[y]' | head -n 1 | awk '{print $2}'";
 $runscript = "ps -o etime= -p ";
@@ -77,7 +77,7 @@ $output .= "<p>" . "Machine uptime: " . $uptime[$i] . "</p>";
 $table .= "<td>" . $uptime[$i] . "</td>";
 $output .= "<p>" . "Machine disk usage: " . $diskspace[$i] . "</p>";
 $output .= "<p>" . "Machine inode usage: " . $inodespace[$i] . "</p>";
-$output .= "<p><meter title='" . $progresscount[$i] . "/"  . $totalcount[$i] . "' value='" . $progresscount[$i] . "' max='" . $totalcount[$i] . "'></meter></p>";
+$output .= "<p><span style=font-size:200%>" . $progresscount[$i] . "</span><meter title='" . $progresscount[$i] . "/"  . $totalcount[$i] . "' value='" . $progresscount[$i] . "' max='" . $totalcount[$i] . "'></meter><span style=font-size:200%>" . $totalcount[$i] . "</span></p>";
 $table .= "<td>" . $progresscount[$i] . "</td>";
 $table .= "<td>" . $totalcount[$i] . "</td>";
 
